@@ -1,0 +1,44 @@
+name: "Setup Keycloak Action"
+author: DreamsOfImran
+description: "GitHub Action for Keycloak"
+branding:
+  color: "blue"
+  icon: "play-circle"
+inputs:
+  keycloak_version:
+    description: "Keycloak Version"
+    default: "latest"
+    required: true
+  keycloak_http_port:
+    description: "Keycloak HTTP Port"
+    default: "8080"
+  keycloak_admin_user:
+    description: "Keycloak Admin User"
+    default: "admin"
+  keycloak_admin_pass:
+    description: "Keycloak Admin Password"
+    default: "admin"
+  keycloak_db:
+    description: "Keycloak Database"
+    default: "mysql"
+  keycloak_db_url_host:
+    description: "Keycloak Database URL Host"
+    default: "localhost:3306"
+  keycloak_db_url_database:
+    description: "Keycloak Database Name"
+    default: "keycloak"
+  keycloak_db_username:
+    description: "Keycloak Database Username"
+    default: "keycloak"
+  keycloak_db_password:
+    description: "Keycloak Database Password"
+    default: "keycloak"
+  keycloak_health_enabled:
+    description: "Keycloak Expose Health Check Endpoints"
+    default: "false"
+  keycloak_log_level:
+    description: "Keycloak Log Level Of The Root Category"
+    default: "DEBUG"
+runs:
+  using: "docker"
+  image: "Dockerfile"

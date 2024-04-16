@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+exec docker run \
+    -d \
+    -v "/var/run/docker.sock":"/var/run/docker.sock" \
+    -p $INPUT_KEYCLOAK_HTTP_PORT:8080 \
+    -e KEYCLOAK_ADMIN=$INPUT_KEYCLOAK_ADMIN_USER \
+    -e KC_DB=$INPUT_KEYCLOAK_DB \
+    -e KC_DB_URL_HOST=$INPUT_KEYCLOAK_DB_URL_HOST \
+    -e KC_DB_URL_DATABASE=$INPUT_KEYCLOAK_DB_URL_DATABASE \
+    -e KC_DB_USERNAME=$INPUT_KEYCLOAK_DB_USERNAME \
+    -e KC_DB_PASSWORD=$INPUT_KEYCLOAK_DB_PASSWORD \
+    -e KC_HEALTH_ENABLED=$INPUT_KEYCLOAK_HEALTH_ENABLED \
+    -e KC_LOG_LEVEL=$INPUT_KEYCLOAK_LOG_LEVEL \
+    quay.io/keycloak/keycloak:$INPUT_KEYCLOAK_VERSION \
+    start-dev
