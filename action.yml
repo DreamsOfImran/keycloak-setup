@@ -15,7 +15,7 @@ inputs:
   keycloak_admin_user:
     description: "Keycloak Admin User"
     default: "admin"
-  keycloak_admin_pass:
+  keycloak_admin_password:
     description: "Keycloak Admin Password"
     default: "admin"
   keycloak_db:

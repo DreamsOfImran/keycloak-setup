@@ -28,7 +28,7 @@ with:
   keycloak_version: 24.0.1
   keycloak_http_port: 8080
   keycloak_admin_user: admin_user
-  keycloak_admin_pass: admin_pass
+  keycloak_admin_password: admin_pass
   keycloak_db: mysql
   keycloak_db_url_host: localhost:3306
   keycloak_db_username: keycloak
