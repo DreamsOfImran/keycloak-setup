@@ -1,4 +1,4 @@
-name: "Setup Keycloak Action"
+name: "Keycloak Setup Action"
 author: DreamsOfImran
 description: "GitHub Action for Keycloak"
 branding:
